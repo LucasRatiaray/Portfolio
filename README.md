@@ -16,3 +16,8 @@
 docker-compose up -d
 symfony server:start
 ```
+
+## Lancer des tests
+
+```bash
+php bin/phpunit --testdox
