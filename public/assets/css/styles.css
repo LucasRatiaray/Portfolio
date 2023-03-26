@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/* My Template CSS
+/*----------------------------------------*/
+
+#body {
+    background-color: rgb(16, 0, 40, 0.9);
+}
+
+.overflow-hidde {
+    overflow: hidden;
+}
+
+/*--------------------*/
+/* HEADER
+/*--------------------*/
+.header {
+    backdrop-filter: blur(8px);
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: rgb(16, 0, 40, 0.8);
+}
+
+.header__logo {
+    padding: 10px 0;
+  }
+
+.header__nav__option {
+    padding: 10px 0;
+}
+
+/*--------------------*/
+/* LOGO
+/*--------------------*/
+.myLogo {
+    position: relative; /* Définir une position relative */
+    display: inline-block; /* Afficher l'image comme un élément en ligne */
+}
+
+.myLogo::after {
+    position: absolute; /* Définir une position absolue par rapport à l'élément parent */
+    bottom: 0; /* Définir la distance entre le bas de l'élément parent et le bas de l'élément ::after */
+    right: -10px; /* Définir la distance entre la droite de l'élément parent et la droite de l'élément ::after */
+    width: 5px; /* Définir la largeur de l'élément ::after */
+    height: 5px; /* Définir la hauteur de l'élément ::after */
+    background-color: #00bfe7; /* Définir la couleur de fond de l'élément ::after */
+    content: ""; /* Ajouter du contenu vide */
+    border-radius: 2px;
+}
+
+/*--------------------*/
+/* SCROLL-BAR
+/*--------------------*/
+/* Pour tous les navigateurs */
+::-webkit-scrollbar {
+    width: 6px;
+}
+    
+/* Pour le bouton de défilement */
+::-webkit-scrollbar-thumb {
+    background-color: #00bfe7;
+    border-radius: 5px;
+}
+
+/* Pour la zone de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: none;
+}
