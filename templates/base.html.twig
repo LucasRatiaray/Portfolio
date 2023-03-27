@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Lucas Ratiaray{% endblock %}</title>
-        <link rel="icon" href="{{ asset('assets/img/logo/dragon.png')}}">
+        <meta name="description" content="Lucas Ratiaray">
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo/dragon.png') }}" />
         <meta charset="UTF-8">
         <meta name="keywords" content="Videograph, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +23,9 @@
         <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('assets/css/slicknav.min.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" type="text/css">
-
-        <meta name="description" content="Videograph Template">
+        <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}" type="text/css">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
