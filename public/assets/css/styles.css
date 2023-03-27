@@ -66,5 +66,6 @@
 
 /* Pour la zone de la barre de défilement */
 ::-webkit-scrollbar-track {
-    background-color: none;
+    background-color: transparent;
+    margin: 2px 0;
 }
