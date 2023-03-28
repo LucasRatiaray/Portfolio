@@ -78,6 +78,13 @@ html {
     padding: 1px 0;
 }
 
+/*--------------------*/
+/* SECTION PORTFOLIO
+/*--------------------*/
+.work {
+    padding-top: 64px;
+}
+
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (max-width: 992px) {
