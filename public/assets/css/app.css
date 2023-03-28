@@ -24,11 +24,11 @@
 }
 
 .header__logo {
-    padding: 10px 0;
-  }
+    padding: 15px 0;
+}
 
 .header__nav__option {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 /*--------------------*/
@@ -67,5 +67,68 @@
 /* Pour la zone de la barre de défilement */
 ::-webkit-scrollbar-track {
     background-color: transparent;
-    margin: 2px 0;
+    padding: 1px 0;
+}
+
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+@media only screen and (max-width: 992px) {
+    /*--------------------*/
+    /* LOGO
+    /*--------------------*/
+    .imgLogo {
+        display: none;
+    }
+
+    .myLogo::after {
+        content: none;
+    }
+
+    /*--------------------*/
+    /* HEADER
+    /*--------------------*/
+    .header.position-fixed {
+        backdrop-filter: none;
+    }
+
+    .header.scrolled {
+        background: none;
+    }
+
+    /*--------------------*/
+    /* NAVBAR
+    /*--------------------*/
+    .slicknav_btn {
+        top: 10px;
+        background-color: transparent;
+        background: transparent;
+        z-index: 999;
+    }
+
+    .slicknav_nav {
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        border-radius: 4px;
+        position: absolute;
+        top: 25px;
+        right: 60px;
+        padding-right: 30px;
+    }
+
+    .slicknav_nav a:hover, .slicknav_item.slicknav_row:hover {
+        color: #00bfe7;
+    }
+
+    .slicknav_item.slicknav_row:hover a {
+        color: #00bfe7;
+    }
+
+    .slicknav_icon-bar {
+        width: 24px !important;
+        height: 4px !important;
+    }
+
+    .dropdown {
+        border-top: 1px solid rgb(255, 255, 255, 0.5);
+    }
 }
