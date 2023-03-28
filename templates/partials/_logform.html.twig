@@ -1,0 +1,46 @@
+<div class="main-form">
+    <div class="form-login">
+        <form class="" method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+    
+            {% if app.user %}
+                <div class="mb-3">
+                    Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+                </div>
+            {% endif %}
+    
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label text-uppercase">Adresse email</label>
+              <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" aria-describedby="emailInfo" placeholder="prenom@nom.com" required autofocus>
+              <div id="emailInfo" class="form-text">Nous ne communiquerons jamais votre email à qui que ce soit.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="inputPassword" class="form-label text-uppercase">Mot de passe</label>
+              <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+              <label class="form-label form-text" for="show-password">
+                <input type="checkbox" class="" id="show-password"> 
+                Afficher le mot de passe</label>
+            </div>
+    
+            <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+            >
+    
+            {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+        
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+            #}
+    
+            <button type="submit" class="btn primary-btn">Connexion</button>
+        </form>
+    </div>
+    </div>
