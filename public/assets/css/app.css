@@ -85,6 +85,13 @@ html {
     padding-top: 64px;
 }
 
+/*--------------------*/
+/* ICON FONT AWESOME
+/*--------------------*/
+.fa {
+    font-size: 16px;
+}
+
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (max-width: 992px) {
