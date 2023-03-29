@@ -1,0 +1,235 @@
+/*----------------------------------------*/
+/* My Template CSS
+/*----------------------------------------*/
+/*--------------------*/
+/* HTML
+/*--------------------*/
+html {
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+
+.body {
+    background-color: rgb(16, 0, 40, 0.9);
+}
+
+.overflow-hidde {
+    overflow: hidden;
+}
+
+/*--------------------*/
+/* HEADER
+/*--------------------*/
+.header {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: rgb(16, 0, 40, 0.8);
+}
+
+.header__logo {
+    padding: 15px 0;
+}
+
+.header__nav__option {
+    padding: 15px 0;
+}
+
+/*--------------------*/
+/* LOGO
+/*--------------------*/
+.myLogo {
+    position: relative; /* Définir une position relative */
+    display: inline-block; /* Afficher l'image comme un élément en ligne */
+}
+
+.myLogo::after {
+    position: absolute; /* Définir une position absolue par rapport à l'élément parent */
+    bottom: 0; /* Définir la distance entre le bas de l'élément parent et le bas de l'élément ::after */
+    right: -10px; /* Définir la distance entre la droite de l'élément parent et la droite de l'élément ::after */
+    width: 5px; /* Définir la largeur de l'élément ::after */
+    height: 5px; /* Définir la hauteur de l'élément ::after */
+    background-color: #00bfe7; /* Définir la couleur de fond de l'élément ::after */
+    content: ""; /* Ajouter du contenu vide */
+    border-radius: 2px;
+}
+
+/*--------------------*/
+/* SCROLL-BAR
+/*--------------------*/
+/* Pour tous les navigateurs */
+::-webkit-scrollbar {
+    width: 6px;
+}
+    
+/* Pour le bouton de défilement */
+::-webkit-scrollbar-thumb {
+    background-color: #00bfe7;
+    border-radius: 5px;
+}
+
+/* Pour la zone de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    padding: 1px 0;
+}
+
+/*--------------------*/
+/* SECTION PORTFOLIO
+/*--------------------*/
+.work {
+    padding-top: 64px;
+}
+
+/*--------------------*/
+/* ICON FONT AWESOME
+/*--------------------*/
+.fa {
+    font-size: 16px;
+}
+
+/*--------------------*/
+/* BUTTON
+/*--------------------*/
+.btn:hover {
+    background-color: white;
+    color: #00bfe7;
+}
+
+/*--------------------*/
+/* FORM LOGIN
+/*--------------------*/
+.main-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/hero/hero-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+.form-login {
+    background-color: rgba(16, 0, 40, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 4px;
+    padding: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-label, .form-text {
+    color: white;
+}
+
+button .btn .primary-btn:hover {
+    color: #00bfe7;
+}
+
+
+/*--------------------------------- Responsive Media Quaries width 992px -----------------------------*/
+@media only screen and (max-width: 992px) {
+    /*--------------------*/
+    /* LOGO
+    /*--------------------*/
+    .imgLogo {
+        display: none;
+    }
+
+    .myLogo::after {
+        content: none;
+    }
+
+    /*--------------------*/
+    /* HEADER
+    /*--------------------*/
+    .header.position-fixed {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .header.scrolled {
+        background: none;
+    }
+
+    /*--------------------*/
+    /* NAVBAR
+    /*--------------------*/
+    .slicknav_btn {
+        top: 10px;
+        background-color: transparent;
+        background: transparent;
+        z-index: 999;
+    }
+
+    .slicknav_nav {
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 4px;
+        position: absolute;
+        top: 25px;
+        right: 60px;
+        padding-right: 30px;
+    }
+
+    .slicknav_nav a:hover, .slicknav_item.slicknav_row:hover {
+        color: black;
+    }
+
+    .slicknav_item.slicknav_row:hover a {
+        color: black;
+    }
+
+    .slicknav_icon-bar {
+        width: 24px !important;
+        height: 4px !important;
+    }
+
+    .dropdown {
+        border-top: 1px solid rgb(255, 255, 255, 0.5);
+    }
+
+    /*--------------------*/
+    /* FORM LOGIN
+    /*--------------------*/
+    .main-form {
+        background-image: none;
+        background: white
+    }
+    .form-login {
+        background-image: url('../img/hero/hero-2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+/*--------------------------------- Responsive Media Quaries width 1058px -----------------------------*/
+@media only screen and (max-width: 1058px) {
+    /*--------------------*/
+    /* FORM LOGIN
+    /*--------------------*/
+    .main-form {
+        background-image: none;
+        background: white
+    }
+    .form-login {
+        background-image: url('../img/hero/hero-2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 80%;
+        max-height: 100%;
+    }
+}

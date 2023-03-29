@@ -1,8 +1,18 @@
+{#
+    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+    See https://symfony.com/doc/current/security/remember_me.html
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="_remember_me"> Remember me
+        </label>
+    </div>
+#}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Lucas Ratiaray{% endblock %}</title>
+        <title>{% block title %}Lucas Ratiaray - Log in!{% endblock %}</title>
         <meta name="description" content="Lucas Ratiaray">
         <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo/dragon.png') }}" />
         <meta charset="UTF-8">
@@ -36,14 +46,10 @@
         {% endblock %}
     </head>
 
-    <body class="body">
-        {% include '/partials/_header.html.twig' %}
-        <!-- Page Preloder -->
-        <div id="preloder">
-            <div class="loader"></div>
-        </div>
-        {% block body %}{% endblock %}
-        {% include '/partials/_footer.html.twig' %}
+    <body>
+        {% block body %}
+        {% include '/partials/_logform.html.twig' %}
+        {% endblock %}
         <!-- Js Plugins -->
         <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}" defer></script>
         <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}" defer></script>

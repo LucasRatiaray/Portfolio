@@ -21,3 +21,9 @@ symfony server:start
 
 ```bash
 php bin/phpunit --testdox
+
+### Pour les utilisateurs macOS
+
+```bash
+find . -name ".DS_Store" -delete
+```
