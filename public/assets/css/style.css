@@ -555,7 +555,7 @@ ol {
   width: calc(33.33% - 10px);
 }
 .work__item.wide__item {
-  width: calc(33.33% - 10px);
+  width: calc(50% - 10px);
   height: 311px !important;
 }
 .work__item .play-btn {
