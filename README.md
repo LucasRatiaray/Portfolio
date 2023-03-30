@@ -14,7 +14,7 @@
 
 ```bash
 docker-compose up -d
-symfony server:start
+symfony server:start -d
 ```
 
 ## Lancer des tests
