@@ -10,6 +10,12 @@
 * Docker
 * Docker compose
 
+### Installation
+
+```bash
+composer install
+```
+
 ### Lancer l'environement de développement
 
 ```bash
