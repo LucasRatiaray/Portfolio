@@ -20,6 +20,10 @@
     </head>
 
     <body>
-        {% include 'template_name' %}
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+        {% block body %}{% endblock %}
     </body>
 </html>
