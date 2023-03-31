@@ -19,6 +19,7 @@ composer install
 ### Lancer l'environement de développement
 
 ```bash
+docker-compose down
 docker-compose up -d
 symfony server:start -d
 ```
@@ -27,6 +28,7 @@ symfony server:start -d
 
 ```bash
 php bin/phpunit --testdox
+```
 
 ### Pour les utilisateurs macOS
 
